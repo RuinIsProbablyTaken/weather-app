@@ -1,0 +1,43 @@
+%html
+  %head
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+
+    %link{:rel => "stylesheet", :type => "text/css", :href => "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css"}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/font/weathericons-regular-webfont.woff2"}
+
+    %style
+    	.box,
+		.forecast-icon {
+		  font-size: 2em;
+		}
+
+		.location,
+		.forecast-section,
+		.temperature-section {
+		  margin: 1% 0;
+		}
+
+  %body
+	.container-fluid.text-center
+	  .box.clearfix
+	    .col-xs-12.location
+	    .col-xs-12.forecast-section
+	      %i.forecast-icon.wi
+	      .forecast-name.text-capitalize
+	      .forecast-description.small.text-muted
+	    .col-xs-12.temperature-section
+	      %span.temperature-celsius
+	      %span.temperature-fahrenheit
+	      %span.temperature-unit-celsius °C
+	      %span.temperature-unit-fahrenheit °F
+	    .col-xs-2.col-xs-offset-4
+	      %button.toggle-unit.btn.btn-block.btn-default Change the Unit
+	    .col-xs-2
+	      %button.refresh.btn.btn-block.btn-default Refresh
+	  %span.col-xs-12.credits.text-muted
+	    made by
+	    %a.text-info{:href => "https://github.com/RuinIsProbablyTaken"} RuinIsProbablyTaken
+	    
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
+    %script{:src => "js/main.js"}
